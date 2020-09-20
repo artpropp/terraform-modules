@@ -4,6 +4,18 @@ variable "server_port" {
     default = 8080
 }
 
+variable "server_text" {
+    description = "The text the web server should return"
+    type = string
+    default = "Hello, World!"
+}
+
+variable "ami" {
+    description = "The AMI to the run in the cluster"
+    type = string
+    default = "ami-0c960b947cbb2dd16"
+}
+
 variable "instance_type" {
     description = "The type of EC2 Instances to run (e.g. t2.micro)"
     type = string
