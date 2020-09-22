@@ -11,6 +11,10 @@ resource "aws_launch_configuration" "example" {
   lifecycle {
     create_before_destroy = true
   }
+
+  provisioner "local-exec" {
+    command = "echo \"Hello, World from $(uname -smn)\""
+  }
 }
 
 # === AutoScaling Group ===
